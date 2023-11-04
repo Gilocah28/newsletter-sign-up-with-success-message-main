@@ -41,7 +41,7 @@ body {
 }
 @media screen and (min-width: 768px) {
   body {
-    background-color: hsl(234, 29%, 20%);
+    background-color: hsl(235, 18%, 26%);
     height: 100vh;
     padding: 0 2rem;
   }

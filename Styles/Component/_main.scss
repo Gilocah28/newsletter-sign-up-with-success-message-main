@@ -31,7 +31,7 @@ body{
     background-color: $White;
 
     @include laptop{
-        background-color: $DarkSlateGrey;
+        background-color: $CharcoalGrey;
         height: 100vh;
         padding: 0 2rem;
     }
