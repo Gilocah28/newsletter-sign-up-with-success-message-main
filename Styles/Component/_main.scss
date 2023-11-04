@@ -1,0 +1,199 @@
+@import 'mediaQuaries';
+
+
+%displayFlex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+%height{
+    height: 60px;
+    border-radius: 8px;
+}
+
+%hoverEffect{
+    transition: all 500ms ease-in-out;
+    background: linear-gradient(120deg, $Tomato 75%, rgba(224, 211, 24, 0.671));
+    cursor: pointer;
+}
+
+%btn{
+    @extend %height;
+    color: $White;
+    font-size: 1rem;
+    font-weight: 700;
+    border: none;
+    background-color: $DarkSlateGrey;
+}
+
+body{
+    color: $DarkSlateGrey;
+    width: 100%;
+    @extend %displayFlex;
+    background-color: $White;
+
+    @include laptop{
+        background-color: $DarkSlateGrey;
+        height: 100vh;
+        padding: 0 2rem;
+    }
+}
+.main___container{
+    width: 100%;
+
+    @include laptop{
+        background-color: $White;
+        max-width: 900px;
+        display: flex;
+        flex-direction: row-reverse;
+        padding: 1rem;
+        border-radius: 15px;
+    }
+
+    @include mobile{
+        padding-bottom: 1rem;
+    }
+    
+    
+
+    .main___image img{
+        width: 100%;
+    }
+
+    .main___content{
+        
+        margin-top: 2rem;
+        padding: 0 2rem;
+
+        h1{
+            letter-spacing: 2px;
+            font-size: 2.3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .checkContent___container{
+            margin-top: 1rem;
+            display: flex;
+
+            p{
+                padding: 0 2rem 0 1rem;
+            }
+            img{
+                align-self: flex-start;
+            }
+        }
+
+        .main___form{
+            margin-top: 3rem;
+            display: flex;
+            flex-direction: column;
+            
+            .form___textCon {
+                display: flex;
+                justify-content: space-between;
+                font-weight: 700;
+                font-size: .8rem;
+                margin-bottom: .5rem;
+                letter-spacing: .5px;
+
+                .hide{
+                    color: $Tomato;
+                    display: none;
+                }
+
+                
+            }
+
+            .input{
+                @extend %height;
+                padding: 0 1.3rem;
+                font-size: 1rem;
+                margin-bottom: 1.5rem;
+                border: .5px solid $Grey;
+                outline: none;
+
+                &::placeholder{
+                    letter-spacing: 1px;
+                }
+            }
+
+            button{
+                @extend %btn;
+
+                &:hover{
+                    @extend %hoverEffect;
+                }
+            }
+            
+        }
+
+
+    }
+
+}
+
+
+.success___container{
+    display: none;
+    width: 100%;
+    padding: 0 1.5rem;
+    margin-top: 6rem;
+    @extend %displayFlex;
+    flex-direction: column;
+
+    @include laptop{
+        width: 400px;
+        height: 500px;
+        padding: 2rem;
+        background-color: $White;
+        border-radius: 20px;
+    }
+
+    img{
+        width: 15%;
+        margin-bottom: 2rem;
+    }
+
+   
+
+    .contianer___text{
+        h1{
+            margin-bottom: 2rem;
+
+            @include laptop{
+                font-size: 3rem;
+                margin-bottom: 1rem;
+            }
+        }
+        p{
+            letter-spacing: 1px;
+            span{
+                font-weight: 700;
+            }
+        }
+    }
+
+    .successbtn{
+        @extend %btn;
+        width: 98%;
+        margin-top: 20rem;
+        &:hover{
+            @extend %hoverEffect;
+        }
+
+        @include laptop{
+            margin-top: 1rem;
+        }
+    }
+}
+
+.block{
+    display: block;
+}
+
+.none{
+    display: none;
+}
+

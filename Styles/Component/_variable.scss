@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+$fontStyle : 'Roboto', sans-serif;
+$Tomato: hsl(4, 100%, 67%);
+$DarkSlateGrey: hsl(234, 29%, 20%);
+$CharcoalGrey: hsl(235, 18%, 26%);
+$Grey: hsl(231, 7%, 60%);
+$White: hsl(0, 0%, 100%);
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 1rem;
+    font-family: $fontStyle;
+}
+p{
+    color: $CharcoalGrey;
+    line-height: 1.7rem;
+}
