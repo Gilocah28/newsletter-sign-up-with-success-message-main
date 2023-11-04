@@ -13,11 +13,7 @@
     border-radius: 8px;
 }
 
-%hoverEffect{
-    transition: all 500ms ease-in-out;
-    background: linear-gradient(120deg, $Tomato 75%, rgba(224, 211, 24, 0.671));
-    cursor: pointer;
-}
+
 
 %btn{
     @extend %height;
@@ -119,11 +115,13 @@ body{
                 }
             }
 
-            button{
+            .btn{
                 @extend %btn;
 
                 &:hover{
-                    @extend %hoverEffect;
+                    transition: all 500ms ease-in;
+                    background: $Tomato;
+                    cursor: pointer;
                 }
             }
             
@@ -175,12 +173,14 @@ body{
         }
     }
 
-    .successbtn{
+    .btn{
         @extend %btn;
         width: 98%;
         margin-top: 20rem;
         &:hover{
-            @extend %hoverEffect;
+            transition: all 500ms ease-in;
+            background: $Tomato;
+            cursor: pointer;
         }
 
         @include laptop{

@@ -21,18 +21,12 @@ p {
   justify-content: center;
 }
 
-.main___container .main___content .main___form .input, .success___container .successbtn, .main___container .main___content .main___form button {
+.main___container .main___content .main___form .input, .success___container .btn, .main___container .main___content .main___form .btn {
   height: 60px;
   border-radius: 8px;
 }
 
-.success___container .successbtn:hover, .main___container .main___content .main___form button:hover {
-  transition: all 500ms ease-in-out;
-  background: linear-gradient(120deg, hsl(4, 100%, 67%) 75%, rgba(224, 211, 24, 0.671));
-  cursor: pointer;
-}
-
-.success___container .successbtn, .main___container .main___content .main___form button {
+.success___container .btn, .main___container .main___content .main___form .btn {
   color: hsl(0, 0%, 100%);
   font-size: 1rem;
   font-weight: 700;
@@ -123,6 +117,12 @@ body {
 .main___container .main___content .main___form .input::placeholder {
   letter-spacing: 1px;
 }
+.main___container .main___content .main___form .btn:hover {
+  transition: all 500ms ease-in;
+  background: hsl(4, 100%, 67%);
+  cursor: pointer;
+}
+
 .success___container {
   display: none;
   width: 100%;
@@ -158,12 +158,17 @@ body {
 .success___container .contianer___text p span {
   font-weight: 700;
 }
-.success___container .successbtn {
+.success___container .btn {
   width: 98%;
   margin-top: 20rem;
 }
+.success___container .btn:hover {
+  transition: all 500ms ease-in;
+  background: hsl(4, 100%, 67%);
+  cursor: pointer;
+}
 @media screen and (min-width: 768px) {
-  .success___container .successbtn {
+  .success___container .btn {
     margin-top: 1rem;
   }
 }
